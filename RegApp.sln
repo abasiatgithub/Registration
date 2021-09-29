@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegApp", "RegApp\RegApp.csproj", "{1F8F57A2-93FF-4232-80C6-5712A1331F1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegApp", "RegApp\RegApp.csproj", "{1F8F57A2-93FF-4232-80C6-5712A1331F1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{E7744769-E73E-4E1F-99E9-F0670D47C982}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{E7744769-E73E-4E1F-99E9-F0670D47C982}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{C52A6880-60F4-4305-BD1B-CFECFBCE318D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{C52A6880-60F4-4305-BD1B-CFECFBCE318D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegAPI", "RegAPI\RegAPI.csproj", "{188969DD-4EE0-4037-9385-92860C62BE9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C52A6880-60F4-4305-BD1B-CFECFBCE318D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C52A6880-60F4-4305-BD1B-CFECFBCE318D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C52A6880-60F4-4305-BD1B-CFECFBCE318D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188969DD-4EE0-4037-9385-92860C62BE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188969DD-4EE0-4037-9385-92860C62BE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188969DD-4EE0-4037-9385-92860C62BE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188969DD-4EE0-4037-9385-92860C62BE9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
