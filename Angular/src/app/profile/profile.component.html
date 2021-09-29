@@ -1,0 +1,124 @@
+<div class="page-wrapper flex-row align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-4 mt-2 form">
+          <div class="card-header text-center h4">
+            <h1>User Profile</h1>
+          </div>
+
+          <form (ngSubmit)="onSubmit()" [formGroup]="profileForm">
+            <div class="card-body py-2">
+              <div *ngIf="errorUpadate" class="text-danger">
+                Update failed ...
+              </div>
+              <input type="hidden" formControlName="userId" />
+              <input type="hidden" formControlName="password" />
+
+              <div class="form-group">
+                <label class="form-control-label" for="FirstName"
+                  >First Name</label
+                >
+                <input
+                  id="FirstName"
+                  formControlName="firstname"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-control-label" for="LastName"
+                  >Last Name</label
+                >
+                <input
+                  id="LastName"
+                  formControlName="lastname"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label" for="Username"
+                  >Username</label
+                >
+                <input
+                  id="Username"
+                  formControlName="username"
+                  type="text"
+                  class="form-control"
+                  placeholder="Username"
+                />
+                <div
+                  *ngIf="
+                    profileForm.controls['password'].invalid &&
+                    (profileForm.controls['password'].dirty ||
+                      profileForm.controls['password'].touched)
+                  "
+                  class="text-danger"
+                >
+                  Username is required
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label" for="Email">Email</label>
+                <input
+                  id="Email"
+                  formControlName="email"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email"
+                />
+                <div
+                  *ngIf="
+                    profileForm.controls['password'].invalid &&
+                    (profileForm.controls['password'].dirty ||
+                      profileForm.controls['password'].touched)
+                  "
+                  class="text-danger"
+                >
+                  Email is required
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label" for="PhoneNumber"
+                  >Phone Number</label
+                >
+                <input
+                  id="PhoneNumber"
+                  formControlName="phonenumber"
+                  class="form-control"
+                  type="tel"
+                  asp-for="PhoneNumber"
+                  placeholder="Phone Number"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label" for="Address">Address</label>
+                <textarea
+                  id="Address"
+                  formControlName="address"
+                  class="form-control"
+                  rows="2"
+                  placeholder="Your Address ..."
+                  for="Address"
+                ></textarea>
+              </div>
+            </div>
+            <div class="col-12 form-group">
+              <button
+                type="submit"
+                class="btn btn-block rounded btn-primary px-5"
+              >
+                Save Changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

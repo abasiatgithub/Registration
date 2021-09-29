@@ -1,0 +1,81 @@
+<div class="page-wrapper flex-row align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-4 mt-2 form">
+          <div class="card-header text-center h4">
+            <h1>Log-in</h1>
+          </div>
+          <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+            <div *ngIf="showWrongMessage" class="text-danger">
+              Username or Password wrong, try again
+            </div>
+            <div class="card-body py-5">
+              <div asp-validation-summary="All" class="text-danger"></div>
+              <div class="form-group">
+                <label class="form-control-label" for="Username"
+                  >Username</label
+                >
+                <input
+                  id="Username"
+                  type="text"
+                  class="form-control"
+                  formControlName="username"
+                  placeholder="Username"
+                />
+                <div
+                  *ngIf="
+                    loginForm.controls['username'].invalid &&
+                    (loginForm.controls['username'].dirty ||
+                      loginForm.controls['username'].touched)
+                  "
+                  class="text-danger"
+                >
+                  Username is required
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-control-label" for="Password"
+                  >Password</label
+                >
+                <input
+                  id="Password"
+                  type="password"
+                  class="form-control"
+                  formControlName="password"
+                  placeholder="Password"
+                />
+                <div
+                  *ngIf="
+                    loginForm.controls['password'].invalid &&
+                    (loginForm.controls['password'].dirty ||
+                      loginForm.controls['password'].touched)
+                  "
+                  class="text-danger"
+                >
+                  Password is required
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 form-group">
+                <button
+                  type="submit"
+                  class="btn btn-block rounded btn-primary px-5"
+                  [disabled]="loginForm.invalid || loginForm.pristine"
+                >
+                  Log in
+                </button>
+              </div>
+              <div class="col-12 form-group">
+                <a class="btn btn-block px-5 rounded" routerLink="/Register"
+                  >Register</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
