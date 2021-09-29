@@ -1,0 +1,42 @@
+﻿@model LogInViewModel
+@{
+    ViewData["Title"] = "LogIn";
+}
+
+<div class="page-wrapper flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4 mt-2 form">
+                    <div class="card-header text-center text-uppercase h4 font-weight-light">
+                        <h1>LogIn</h1>
+                    </div>
+                    <form asp-action="LogIn">
+                        <div class="card-body py-5">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="Username"></label>
+                                <input type="text" class="form-control" asp-for="Username" placeholder="Username">
+                                @*<span asp-validation-for="Username" class="text-danger"></span>*@
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="Password"></label>
+                                <input type="password" class="form-control" asp-for="Password" placeholder="Password">
+                                @*<span asp-validation-for="Password" class="text-danger"></span>*@
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <button type="submit" class="btn btn-block rounded btn-primary px-5">Log in</button>
+                            </div>
+                            <div class="col-12 form-group">
+                                <a class="btn btn-block px-5 rounded" href="/Account/Register">Register</a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

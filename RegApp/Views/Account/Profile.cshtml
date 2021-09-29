@@ -1,0 +1,62 @@
+﻿@model ProfileViewModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="page-wrapper flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4 mt-2 form">
+                    <div class="card-header text-center h4">
+                        <h1>User Profile</h1>
+                    </div>
+                    <hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger">
+                    </div>
+                    <form asp-action="EditProfile">
+                        <div class="card-body py-2">
+
+                            <input class="form-control" type="hidden" asp-for="UserId">
+                            <input class="form-control" type="hidden" asp-for="Password">
+
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="FirstName"></label>
+                                <input type="text" class="form-control" asp-for="FirstName">
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="LastName"></label>
+                                <input type="text" class="form-control" asp-for="LastName">
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="Username"></label>
+                                <input type="text" class="form-control" asp-for="Username" placeholder="Username">
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="Email"></label>
+                                <input type="text" class="form-control" asp-for="Email" placeholder="Email">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="PhoneNumber"></label>
+                                <input class="form-control" type="tel" asp-for="PhoneNumber" placeholder="Phone Number">
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="Address"></label>
+                                <textarea class="form-control" asp-for="Address"></textarea>
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 form-group">
+                            <button type="submit" class="btn btn-block rounded btn-primary px-5">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

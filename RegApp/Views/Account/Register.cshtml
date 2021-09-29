@@ -1,0 +1,51 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="page-wrapper flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4 mt-2 form">
+                    <div class="card-header text-center h4">
+                        <h1>Register</h1>
+                    </div>
+                    <hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger">
+                    </div>
+                    <form asp-action="Register">
+                        <div class="card-body py-2">
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="Username"></label>
+                                <input type="text" class="form-control" asp-for="Username" placeholder="Username">
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="Email"></label>
+                                <input type="text" class="form-control" asp-for="Email" placeholder="Email">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="Password"></label>
+                                <input class="form-control" type="password" asp-for="Password" placeholder="Password">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" asp-for="ConfirmPassword"></label>
+                                <input class="form-control" type="password" asp-for="ConfirmPassword" placeholder="Confirm Password">
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 form-group">
+                            <button type="submit" class="btn btn-block rounded btn-primary px-5">Next</button>
+                        </div>
+                        <div class="col-12 form-group">
+                            <a class="btn btn-block px-5 rounded" href="/Account/LogIn">Log in</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
