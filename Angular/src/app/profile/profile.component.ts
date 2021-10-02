@@ -29,9 +29,9 @@ export class ProfileComponent implements OnInit {
     userId: new FormControl(null),
     firstname: new FormControl(null),
     lastname: new FormControl(null),
-    username: new FormControl(null),
+    username: new FormControl(null, Validators.required),
     password: new FormControl(null),
-    email: new FormControl(null),
+    email: new FormControl(null, Validators.required),
     phonenumber: new FormControl(null),
     address: new FormControl(null),
   });

@@ -68,6 +68,7 @@
                   class="form-control"
                   [formControl]="email"
                   placeholder="Email"
+                  email
                 />
                 <div
                   [hidden]="email.valid || email.untouched"
@@ -75,6 +76,9 @@
                 >
                   <div [hidden]="!username.hasError('required')">
                     Email is required
+                  </div>
+                  <div [hidden]="!email.hasError('email')">
+                    Enter correct email
                   </div>
                 </div>
               </div>

@@ -50,11 +50,7 @@
                   placeholder="Username"
                 />
                 <div
-                  *ngIf="
-                    profileForm.controls['password'].invalid &&
-                    (profileForm.controls['password'].dirty ||
-                      profileForm.controls['password'].touched)
-                  "
+                  *ngIf="profileForm.controls['username'].invalid"
                   class="text-danger"
                 >
                   Username is required
@@ -69,16 +65,13 @@
                   type="text"
                   class="form-control"
                   placeholder="Email"
+                  email
                 />
                 <div
-                  *ngIf="
-                    profileForm.controls['password'].invalid &&
-                    (profileForm.controls['password'].dirty ||
-                      profileForm.controls['password'].touched)
-                  "
+                  *ngIf="profileForm.controls['email'].invalid"
                   class="text-danger"
                 >
-                  Email is required
+                  Enter correct email
                 </div>
               </div>
 
@@ -91,7 +84,6 @@
                   formControlName="phonenumber"
                   class="form-control"
                   type="tel"
-                  asp-for="PhoneNumber"
                   placeholder="Phone Number"
                 />
               </div>
